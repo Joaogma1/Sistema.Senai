@@ -1,0 +1,32 @@
+<h1>Formulário de Cadastro de Transação</h1>
+
+<form action="/Transacao/Cadastro" method="POST">
+
+
+<label>
+    Descrição:
+    <input type="text" name="descri">
+</label>
+
+
+<label>
+    Valor
+    <input type="number" name="valor">
+</label>
+
+<label>
+    Tipo
+    <select name="tipo">
+        <option value="Despesa">Despesa</option>
+        <option value="Receita">Receita</option>
+    </select>
+</label>
+
+
+<label>
+    Data
+    <input type="date" name="data">
+</label>
+<input type="submit" name="Cadastrar">
+
+</form>

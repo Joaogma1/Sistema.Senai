@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\00836578279\\Desktop\\1211\\Senai.Transacoes.Mvc\\Senai.Transacoes.Mvc.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  }
+}
