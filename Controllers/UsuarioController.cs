@@ -3,15 +3,16 @@ using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.Transacoes.Mvc.Models;
+using Senai.Transacoes.Mvc.Repositorios;
 
 namespace Senai.Transacoes.Mvc.Controllers {
     public class UsuarioController : Controller{
         [HttpGet]
-        public ActionResult Cadastrar() => View();
+        public ActionResult Cadastro() => View();
 
 
         [HttpPost]
-        public ActionResult Cadastrar (IFormCollection form) {
+        public ActionResult Cadastro (IFormCollection form) {
             UsuarioModel usuario = new UsuarioModel ();
             usuario.Nome = form["nome"];
             usuario.Email = form["email"];
@@ -36,6 +37,25 @@ namespace Senai.Transacoes.Mvc.Controllers {
                 Email = form["email"],
                 Senha = form["senha"]
             };
+            UsuarioRepositorio usuarioRep =  new UsuarioRepositorio();
+            UsuarioModel  usuarioModel = usuarioRep.BuscarPorEmailESenha(usuario.Email, usuario.Senha) ;
+            if (usuarioModel!= null)
+            {
+                HttpContext.Session.SetString("idUsuario", usuarioModel.Email.ToString());
+            
+
+                ViewBag.Mensagem = "Login Realizado com sucesso!";
+                return RedirectToAction("Cadastro", "Transacao");
+                
+            }else
+            {
+            ViewBag.Mensagem = "Acesso Negado!";
+                
+            }
+
+            return View();
+
         }
+
     }
 }

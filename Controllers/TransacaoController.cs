@@ -7,13 +7,18 @@ using Senai.Transacoes.Mvc.Models;
 namespace Senai.Transacoes.Mvc.Controllers {
     public class TransacaoController : Controller {
         [HttpGet]
-        public ActionResult Cadastro () {
+        public IActionResult Cadastro () {
+            if (string.IsNullOrEmpty (HttpContext.Session.GetString ("idUsuario"))) {
+                return RedirectToAction ("Login", "Usuario");
 
+            }
             return View ();
+
         }
 
         [HttpPost]
         public ActionResult Cadastro (IFormCollection form) {
+
             TransacaoModel transacao = new TransacaoModel ();
             transacao.Descricao = form["descri"];
             transacao.Valor = decimal.Parse (form["valor"]);
