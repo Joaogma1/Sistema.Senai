@@ -32,6 +32,8 @@ namespace Senai.Transacoes.Mvc {
             }
             app.UseSession();
 
+            app.UseStaticFiles();
+
             app.UseMvc (
                 rota => rota.MapRoute (
                     name: "default",

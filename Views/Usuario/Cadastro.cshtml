@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
+
+@{
+    Layout = "MasterpageDeslogado";
+}
+
+@ViewBag.Mensagem
      <h1>Formulário de Cadastro</h1>
     <form style="display: flex; flex-direction: column; width: 300px; align-items: center" action="Usuario/Cadastrar" method="post">
         <label for="nome">Nome:
@@ -23,5 +20,3 @@
         </label>
         <input type="submit" value="Enviar">
     </form>
-</body>
-</html>

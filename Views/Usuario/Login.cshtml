@@ -1,8 +1,12 @@
+@{
+    Layout = "MasterpageDeslogado";
+}
+<link href="/css/login.css" rel="stylesheet">
 @ViewBag.Mensagem
 <form action="/Usuario/Login" method="POST">
 
 
-<label>
+<label class="cor-amarela">
     E-mail
     <input type="email" name="email"
     required maxlength="110">

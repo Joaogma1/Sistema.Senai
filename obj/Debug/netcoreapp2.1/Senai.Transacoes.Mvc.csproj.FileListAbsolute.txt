@@ -23,3 +23,4 @@ C:\Users\00836578279\Desktop\1211\Senai.Transacoes.Mvc\obj\Debug\netcoreapp2.1\S
 C:\Users\00836578279\Desktop\1211\Senai.Transacoes.Mvc\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Cadastro.g.cshtml.cs
 C:\Users\00836578279\Desktop\1211\Senai.Transacoes.Mvc\obj\Debug\netcoreapp2.1\Razor\Views\Transacao\Cadastro.g.cshtml.cs
 C:\Users\00836578279\Desktop\1211\Senai.Transacoes.Mvc\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Login.g.cshtml.cs
+C:\Users\00836578279\Desktop\1211\Senai.Transacoes.Mvc\obj\Debug\netcoreapp2.1\Razor\Views\Shared\MasterpageDeslogado.g.cshtml.cs
